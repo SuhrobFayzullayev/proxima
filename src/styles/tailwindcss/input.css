@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Proxima Nova";
+    src: url("./../../public/fonts/proximanova.ttf");
+  }
+
+  body,
+  p,
+  div,
+  a,
+  button,
+  ul,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  html,
+  span,
+  input,
+  textarea,
+  input::placeholder,
+  textarea::placeholder,
+  * {
+    font-family: "Proxima Nova" !important;
+  }
+}

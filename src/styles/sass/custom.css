@@ -1,0 +1,42 @@
+.years {
+  /* Track */
+  /* Handle */
+}
+.years::-webkit-scrollbar {
+  height: 2px;
+}
+.years::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(209, 209, 209);
+  border-radius: 5px;
+}
+.years::-webkit-scrollbar-thumb {
+  background: rgb(126, 126, 126);
+  border-radius: 5px;
+}
+
+.swiper .swiper-button-next:after,
+.swiper .swiper-button-prev:after {
+  font-size: 13px !important;
+  color: #646464;
+  font-weight: 600;
+}
+
+.project-swiper-btns::after {
+  color: white !important;
+}
+
+@media (max-width: 640px) {
+  .some-inform-wrapper .some-inform:nth-child(2) .text-content, .some-inform-wrapper .some-inform:nth-child(4) .text-content, .some-inform-wrapper .some-inform:nth-child(6) .text-content, .some-inform-wrapper .some-inform:nth-child(8) .text-content, .some-inform-wrapper .some-inform:nth-child(10) .text-content, .some-inform-wrapper .some-inform:nth-child(12) .text-content, .some-inform-wrapper .some-inform:nth-child(14) .text-content, .some-inform-wrapper .some-inform:nth-child(16) .text-content, .some-inform-wrapper .some-inform:nth-child(18) .text-content, .some-inform-wrapper .some-inform:nth-child(20) .text-content {
+    order: 1;
+    padding-left: 0px !important;
+  }
+  .some-inform-wrapper .some-inform:nth-child(2) .img-content, .some-inform-wrapper .some-inform:nth-child(4) .img-content, .some-inform-wrapper .some-inform:nth-child(6) .img-content, .some-inform-wrapper .some-inform:nth-child(8) .img-content, .some-inform-wrapper .some-inform:nth-child(10) .img-content, .some-inform-wrapper .some-inform:nth-child(12) .img-content, .some-inform-wrapper .some-inform:nth-child(14) .img-content, .some-inform-wrapper .some-inform:nth-child(16) .img-content, .some-inform-wrapper .some-inform:nth-child(18) .img-content, .some-inform-wrapper .some-inform:nth-child(20) .img-content {
+    order: 2;
+  }
+}
+@media (max-width: 999.5px) {
+  .swiper .swiper-button-next:after,
+.swiper .swiper-button-prev:after {
+    font-size: 10px !important;
+  }
+}/*# sourceMappingURL=custom.css.map */

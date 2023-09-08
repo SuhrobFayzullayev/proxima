@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./src/styles/tailwindcss/output.css" rel="stylesheet" />
+  <link href="./src/styles/sass/custom.css" rel="stylesheet" />
+  <title>Proxima | About</title>
+</head>
+
+<body>
+  <div class="w-full mx-auto wrapper-fluid overflow-hidden relative flex min-h-screen flex-col">
+    <!-- header start -->
+    <div class="header absolute top-0 left-0 z-10 w-full  px-4">
+      <div class="header-centered max-w-screen-xl mx-auto w-full py-4 flex justify-between items-center">
+        <div id="navbar-toggler"
+          class="navbar-toggler cursor-pointer [@media(min-width:1100px)]:hidden sm:w-[30px] sm:h-[30px]  max-sm:w-[20px] max-sm:h-[20px]">
+          <img src="./src/public/icons/menu.png" alt="" class="w-full h-full">
+        </div>
+
+        <div class="logo">
+          <a href="/index.html">
+            <img src="./src/public/icons/logo.png" alt="" class="sm:w-[180px] max-sm:-mt-1 max-sm:w-[150px]" />
+          </a>
+        </div>
+
+        <div class="link-content [@media(max-width:1100px)]:hidden flex text-white text-[16px] justify-between
+          items-center max-w-[50%] w-full mx-5">
+          <a href="./about.html">О компании</a>
+          <a href="./project.html">Проекты</a>
+          <a href="./products.html">Продукция</a>
+          <a href="./questions.html">Вопросы</a>
+        </div>
+
+        <div class="search-content  flex justify-between items-center">
+          <button onclick="submitApplicationModalOpen()"
+            class="px-3 py-2 [@media(max-width:1100px)]:hidden text-center w-max border bg-transparent text-[14px] text-[white] uppercase">
+            Оставить заявку
+          </button>
+
+          <div id="dropdownBtn" class="languages-dropdown sm:mx-5 max-sm:mr-2 max-sm:ml-0 relative">
+            <div id="lang-head" class="head text-white text-[16px] cursor-pointer flex items-center">
+              <span class="current-language">Uz</span>
+              <span class="mx-1 mt-[2px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 12 7" fill="none">
+                  <path d="M11 1L6 6L1 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </span>
+            </div>
+            <div id="dropdownContent"
+              class="body hidden absolute p-2 top-[32px] border w-[40px] h-fit bg-transparent right-0">
+              <a href="#" id="en" class="text-white text-[16px]">Uz</a>
+              <br />
+              <a href="#" id="ru" class="text-white text-[16px]">Ru</a>
+            </div>
+          </div>
+
+          <div id="searchBtn"
+            class="search cursor-pointer sm:w-[30px] sm:h-[30px] relative max-sm:w-[25px] max-sm:h-[25px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 28 28" fill="none">
+              <path
+                d="M21 12.25C21 17.0824 17.0824 21 12.25 21C7.4175 21 3.5 17.0824 3.5 12.25C3.5 7.4175 7.4175 3.5 12.25 3.5C17.0824 3.5 21 7.4175 21 12.25Z"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M23.3336 23.3334L18.4375 18.4373" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+            <div id="searchContent"
+              class="search-content hidden w-[260px] h-[45px] border border-white bg-transparent absolute top-[40px] right-0">
+              <form action="" class="w-full h-full p-0 m-0 flex ">
+                <input type="text"
+                  class="border-none bg-transparent placeholder:text-white text-[18px] outline-none w-full h-full px-3 py-2 text-white"
+                  placeholder="Search...">
+                <button type="submit" class="p-2 border-l"> <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-full h-full" viewBox="0 0 28 28" fill="none">
+                    <path
+                      d="M21 12.25C21 17.0824 17.0824 21 12.25 21C7.4175 21 3.5 17.0824 3.5 12.25C3.5 7.4175 7.4175 3.5 12.25 3.5C17.0824 3.5 21 7.4175 21 12.25Z"
+                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M23.3336 23.3334L18.4375 18.4373" stroke="white" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- off-canvas start -->
+      <div id="header-off-canvas"
+        class="overflow-hidden [&.open-canvas]:-translate-x-[14px] w-[100vw] -translate-x-[100%] header-off-canvas absolute z-20 top-0 left-0 h-[100vh] bg-[rgba(0,0,0,0.3)]">
+        <div
+          class="transition-all duration-[0.15s] left-side max-w-[400px] -translate-x-[100%]  h-full mr-[60px] bg-white px-10 py-5">
+          <div class="links w-full">
+            <div class="link">
+              <a href="./about.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                О компании </a>
+            </div>
+            <div class="link my-3">
+              <a href="./project.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                Проекты </a>
+            </div>
+            <div class="link my-3">
+              <a href="./products.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                Продукция </a>
+            </div>
+            <div class="link">
+              <a href="./questions.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                Вопросы </a>
+            </div>
+            <div class="link mt-4">
+              <button onclick="submitApplicationModalOpen()" class=" px-3 py-2 text-center w-max border border-orange text-orange bg-transparent
+              [@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] uppercase">
+                Оставить заявку
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- off-canvas end -->
+
+    </div>
+    <!-- header end -->
+
+    <!-- submit application start -->
+    <div id="submit-application"
+      class="hidden backdrop px-5 fixed z-50 justify-stretch items-start top-0 left-0 w-full h-full bg-[rgb(0,0,0,0.60)]">
+      <div class="transition-all duration-[0.2s] ease-linear max-w-[500px] w-full bg-white h-fit mx-auto p-3 mt-32">
+        <div class="close-btn float-right m-2 cursor-pointer" id="applicationCloseBtn"
+          onclick="submitApplicationModalClose()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22" fill="none">
+            <path
+              d="M0.292993 0.292893C0.683518 -0.0976311 1.31668 -0.097631 1.70721 0.292893L21.5062 20.0919C21.8967 20.4824 21.8967 21.1156 21.5062 21.5061C21.1157 21.8966 20.4825 21.8966 20.092 21.5061L0.292994 1.70711C-0.0975304 1.31658 -0.097531 0.683417 0.292993 0.292893Z"
+              fill="#D5D5D5" />
+            <path
+              d="M21.5061 0.293125C21.1156 -0.0973988 20.4824 -0.0973988 20.0919 0.293125L0.292893 20.0921C-0.0976308 20.4826 -0.0976314 21.1158 0.292893 21.5063C0.683417 21.8969 1.31658 21.8969 1.70711 21.5063L21.5061 1.70734C21.8966 1.31682 21.8966 0.68365 21.5061 0.293125Z"
+              fill="#D5D5D5" />
+          </svg>
+        </div>
+        <!-- Text content start -->
+        <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
+          <!-- Title start -->
+          <div
+            class="title text-dimgray mt-5 [@media(min-width:576px)]:text-[36px] [@media(max-width:576px)]:text-[30px] font-[300]">
+            Оставить заявку
+          </div>
+          <!-- Title end -->
+        </div>
+        <!-- Text content end -->
+
+        <!-- Form Content start -->
+        <div class="form-content mx-auto px-2 ">
+          <form action="" method="get" class="my-3">
+            <div class="input-content">
+              <input required type="text"
+                class="w-full [@media(min-width:576px)]:h-[50px] [@media(max-width:576px)]:h-[45px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-dimgray outline-none border"
+                placeholder="ФИО" />
+              <input required type="number"
+                class="w-full [@media(min-width:576px)]:h-[50px] [@media(max-width:576px)]:h-[45px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-dimgray outline-none border"
+                placeholder="Телефонный номер" />
+
+            </div>
+            <div class="button-content my-3 w-full flex justify-center items-center">
+              <button type="submit"
+                class="border-none uppercase w-full [@media(min-width:576px)]:py-3 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-2 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-orange">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Form Content end -->
+      </div>
+    </div>
+
+    <!-- submit application end -->
+
+    <div class="main h-fit">
+      <div
+        class="back-img px-4 h-[200px] mx-auto w-full bg-no-repeat bg-center flex items-center bg-cover  justify-center"
+        style="background-image: url('./src/public/images/back-img.jpg');">
+
+        <div class="text-content max-w-screen-xl mx-auto w-full">
+          <div
+            class="title mt-10 max-md:w-full font-[400] md:w-[60%] max-lg:text-[25px] lg:text-[30px] uppercase text-[white]">
+            О компании</div>
+        </div>
+      </div>
+      <div class="w-full mx-auto px-3">
+        <div class="div max-w-screen-xl mx-auto lg:my-10 max-lg:mt-0 pt-10 flex justify-between flex-wrap items-start">
+          <div class="link-content lg:w-[15%] max-lg:w-max px-3">
+            <div
+              class="mb-3 text-dimgray before:text-orange active-link [&.active-link]:before:content-['_-'] [&.active-link]:text-orange [&.active-link]:before:-ml-[9px]">
+              <a href="./about.html"
+                class="text-[18px] text-inherit hover:text-orange uppercase transition-all duration-150 ease-linear">
+                О компании
+              </a>
+            </div>
+            <div
+              class="mb-3 text-dimgray before:text-orange [&.active-link]:before:content-['_-'] [&.active-link]:text-orange [&.active-link]:before:-ml-2.5">
+              <a href="./news.html"
+                class="text-[18px] text-inherit hover:text-orange uppercase transition-all duration-150 ease-linear">
+                новости
+              </a>
+            </div>
+            <div
+              class="mb-3 text-dimgray before:text-orange [&.active-link]:before:content-['_-'] [&.active-link]:text-orange [&.active-link]:before:-ml-2.5">
+              <a href="./team.html"
+                class="text-[18px] text-inherit hover:text-orange uppercase transition-all duration-150 ease-linear">
+                команда
+              </a>
+            </div>
+            <div
+              class="mb-3 text-dimgray before:text-orange [&.active-link]:before:content-['_-'] [&.active-link]:text-orange [&.active-link]:before:-ml-2.5">
+              <a href="./contacts.html"
+                class="text-[18px] text-inherit hover:text-orange uppercase transition-all duration-150 ease-linear">
+                контакты
+              </a>
+            </div>
+          </div>
+          <div class="body-content lg:w-[80%] max-lg:w-full px-1">
+            <div class="breadcrumb text-[#A4A4A4] text-[16px] flex items-center">
+              <a href="./index.html">Главная </a>
+              <span class="mx-2">\</span>
+              <a href="./about.html">О компании</a>
+            </div>
+
+            <div class="body mt-2 h-fit">
+              <div class="title max-md:w-full md:w-[60%] max-lg:text-[25px] lg:text-[30px] uppercase text-dimgray">
+                О компании</div>
+
+              <div class="text-content text-dimgray sm:text-[18px] max-sm:text-[16px] mt-1">
+                <div class="text ">
+                  Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam
+                  rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
+                  explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia
+                  consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui
+                  dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi
+                  tempora
+                  incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                  nostrum
+                  exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis
+                  autem
+                  vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel
+                  illum,
+                  qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio
+                  dignissimos
+                  ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias
+                  excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt
+                  mollitia
+                  animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam
+                  libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime
+                  placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem
+                  quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae
+                  sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                  reiciendis
+                  voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+                </div>
+
+                <div class="some-inform-wrapper mt-10 mx-auto overflow-hidden h-fit w-full ">
+                  <!-- foreach -->
+                  <div class="w-full mx-auto some-inform sm:mb-10 max-sm:mb-5">
+                    <div class="text-content mb-5">
+                      <div class="box ">
+                        <div class="icon md:w-[70px] md:h-[70px] max-md:w-[50px]  max-md:h-[50px] max-md:pl-1">
+                          <img src="./src/public/icons/icon-1.jpg" alt="" class="w-full h-full -ml-3">
+                        </div>
+                        <div
+                          class="title text-dimgray [@media(min-width:768px)]:text-[22px] [@media(min-width:576px)]:text-[19px] [@media(min-width:480px)]:text-[17px] [@media(max-width:480px)]:text-[15px] uppercase">
+                          Производство</div>
+                        <hr class="w-[30px] bg-orange border-none h-[2px] md:my-3 max-md:my-1">
+                        <div class="description text-dimgray text-[16px] ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="img-content   md:h-[350px] sm:h-[280px] max-sm:h-fit">
+                      <img src="./src/public/images/about-img-1.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                  </div>
+                  <!-- foreach -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-content w-full mx-auto mb-5">
+        <div class="sm:text-[30px] max-sm:text-[25px] text-dimgray text-center uppercase">Реализованные проекты</div>
+        <div class="sm:text-[30px] max-sm:text-[25px] text-orange text-center font-[600]">1000 МВт</div>
+      </div>
+
+      <div class="map-content mt-6 md:h-[450px] max-md:h-fit flex justify-between flex-wrap items-center">
+        <div class="left-side md:w-[50%] max-md:w-full max-md:py-5 px-5 flex justify-end">
+          <div class="md:max-w-[600px] max-md:w-full w-full">
+            <div class="title flex w-fit items-center">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                  <path
+                    d="M8 9C8.82843 9 9.5 8.32843 9.5 7.5C9.5 6.67157 8.82843 6 8 6C7.17157 6 6.5 6.67157 6.5 7.5C6.5 8.32843 7.17157 9 8 9Z"
+                    fill="#FC7E1F" />
+                  <path
+                    d="M8 1.00149e-08C5.89206 -0.00010539 3.86926 0.831759 2.37124 2.31479C0.873231 3.79782 0.0210794 5.81216 0 7.92C0 13.4 7.05 19.5 7.35 19.76C7.53113 19.9149 7.76165 20.0001 8 20.0001C8.23835 20.0001 8.46887 19.9149 8.65 19.76C9 19.5 16 13.4 16 7.92C15.9789 5.81216 15.1268 3.79782 13.6288 2.31479C12.1307 0.831759 10.1079 -0.00010539 8 1.00149e-08ZM8 11C7.30777 11 6.63108 10.7947 6.0555 10.4101C5.47993 10.0256 5.03133 9.47893 4.76642 8.83939C4.50151 8.19985 4.4322 7.49612 4.56725 6.81718C4.7023 6.13825 5.03564 5.51461 5.52513 5.02513C6.01461 4.53564 6.63825 4.2023 7.31718 4.06725C7.99612 3.9322 8.69985 4.00151 9.33939 4.26642C9.97893 4.53133 10.5256 4.97993 10.9101 5.5555C11.2947 6.13108 11.5 6.80777 11.5 7.5C11.5 8.42826 11.1313 9.3185 10.4749 9.97487C9.8185 10.6313 8.92826 11 8 11Z"
+                    fill="#FC7E1F" />
+                </svg>
+              </span>
+              <span class="ml-2 text-dimgray mt-1 font-[600] md:text-[24px] max-md:text-[21px]">
+                Офис в Ташкенте
+              </span>
+            </div>
+
+            <div class="text-item text-dimgray md:text-[18px] max-md:text-[16px] my-5">
+              <span>Адрес:</span>
+              <br>
+              <a href="https://www.google.com/maps/search/+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD,+%D0%B3.+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%D0%A3%D0%BB.+%D0%A2%D0%B5%D0%BC%D1%83%D1%80+%D0%9C%D0%B0%D0%BB%D0%B8%D0%BA,+%D0%B4%D0%BE%D0%BC+17%D0%B0/@41.2905012,69.3319186,18z?entry=ttu"
+                class="font-[600]">
+                Узбекистан, г. ТашкентУл. Темур Малик, дом 17а
+              </a>
+            </div>
+            <div class="text-item text-dimgray md:text-[18px] max-md:text-[16px] my-5">
+              <span>Телефонный номер:</span>
+              <br>
+              <a href="tel:+99 893 505 45 05" class="font-[600]">
+                +99 893 505 45 05
+              </a>
+            </div>
+            <div class="text-item text-dimgray md:text-[18px] max-md:text-[16px] my-5">
+              <span>
+                Электронная почта:
+              </span>
+              <br>
+              <a href="mailto:info@sos.uz" class="font-[600]">
+                info@sos.uz
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="right-side md:w-[50%] max-md:w-full md:h-full max-md:h-[300px]">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d11980.718583378304!2d69.34735085!3d41.348448850000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0JDQtNGA0LXRgTog0KPQt9Cx0LXQutC40YHRgtCw0L0sINCzLiDQotCw0YjQutC10L3RgtCj0LsuINCi0LXQvNGD0YAg0JzQsNC70LjQuiwg0LTQvtC8IDE30LA!5e0!3m2!1sru!2s!4v1692903609692!5m2!1sru!2s"
+            class="w-full h-full" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border: 0"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer w-full mx-auto mt-auto bg-[#2B2B2B]">
+      <div class="top-footer mx-auto max-w-screen-xl my-10 flex flex-wrap justify-between px-3">
+        <div
+          class="logo-footer mb-5 [@media(min-width:786px)]:w-[30%] [@media(min-width:450px)]:w-1/2 [@media(max-width:450px)]:w-full">
+
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./src/public/icons/logo.png" alt="" class="max-w-[180px]">
+            </a>
+          </div>
+
+          <div class="sm-icons w-fit flex justify-between items-center mt-7">
+            <a href="#" class="mr-4 w-[35px] h-[35px] group ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 30 30" fill="none">
+                <rect opacity="0.2" width="30" height="30"
+                  class="group-hover:opacity-[1] transition-all duration-[0.1s] ease-linear" rx="15" fill="white" />
+                <path
+                  d="M14.9679 8.25C15.866 8.28207 16.7962 8.28208 17.6943 8.31415C18.4962 8.34623 19.2339 8.47452 19.9395 8.8915C20.8376 9.43677 21.3829 10.2386 21.5754 11.265C21.6716 11.8745 21.7037 12.516 21.7357 13.1254C21.7678 14.4725 21.7357 15.8197 21.7357 17.1668C21.7357 17.8725 21.7037 18.5781 21.4791 19.2517C21.0301 20.5668 20.0999 21.3687 18.7528 21.6253C18.1433 21.7536 17.5018 21.7536 16.8924 21.7856C15.5453 21.8177 14.2302 21.7856 12.8831 21.7856C12.1774 21.7856 11.4718 21.7536 10.7982 21.529C9.4831 21.08 8.68123 20.1498 8.42463 18.8027C8.29633 18.1932 8.29633 17.5517 8.26426 16.9423C8.23218 15.5952 8.26426 14.248 8.26426 12.9009C8.26426 12.1952 8.29633 11.4896 8.52086 10.816C8.9699 9.50092 9.90008 8.69905 11.2472 8.44245C11.8567 8.31415 12.4982 8.31415 13.1076 8.28208C13.6849 8.25 14.3264 8.25 14.9679 8.25ZM20.5169 14.8895C20.4848 14.8895 20.5169 14.8895 20.5169 14.8895C20.4848 14.3442 20.4848 13.831 20.4848 13.2858C20.4848 12.7726 20.4527 12.2594 20.3886 11.7462C20.2603 10.5915 19.5867 9.82167 18.4641 9.59715C17.8867 9.46885 17.2452 9.46885 16.6679 9.46885C15.5132 9.43677 14.3906 9.43677 13.2359 9.46885C12.6585 9.46885 12.0812 9.50092 11.5359 9.59715C10.5737 9.75752 9.90008 10.3028 9.6114 11.265C9.51518 11.5858 9.4831 11.9065 9.45103 12.2273C9.41895 13.4461 9.41895 14.665 9.41895 15.8838C9.41895 16.6536 9.45103 17.4555 9.51518 18.2253C9.6114 19.38 10.3171 20.1819 11.4718 20.3743C12.0491 20.4706 12.6585 20.5026 13.268 20.5026C14.3906 20.5347 15.5132 20.5026 16.6679 20.5026C17.1811 20.5026 17.6943 20.4706 18.2075 20.4064C18.6886 20.3743 19.1377 20.214 19.5226 19.8932C20.1641 19.38 20.3886 18.7064 20.4207 17.9366C20.4848 16.9744 20.4848 15.9159 20.5169 14.8895Z"
+                  fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
+                <path
+                  d="M18.4321 15.0178C18.4321 16.9423 16.8925 18.4819 14.968 18.4819C13.0435 18.4819 11.5039 16.9423 11.5039 14.9857C11.5039 13.0933 13.0756 11.5537 15.0001 11.5537C16.8925 11.5537 18.4321 13.0933 18.4321 15.0178ZM14.9359 17.2631C16.1548 17.2631 17.1812 16.2367 17.1812 15.0178C17.1812 13.799 16.1548 12.7726 14.9359 12.7726C13.685 12.7726 12.6907 13.799 12.6907 15.0178C12.6907 16.2367 13.7171 17.2631 14.9359 17.2631Z"
+                  fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
+                <path
+                  d="M19.3625 11.3932C19.3625 11.8422 19.0096 12.2271 18.5606 12.2271C18.1115 12.2271 17.7266 11.8422 17.7587 11.3932C17.7587 10.9441 18.1115 10.5913 18.5606 10.5913C19.0096 10.5913 19.3625 10.9441 19.3625 11.3932Z"
+                  fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
+              </svg>
+            </a>
+            <a href="#" class="mr-4 w-[35px] h-[35px] group ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 30 30" fill="none">
+                <rect opacity="0.2" width="30" height="30"
+                  class="group-hover:opacity-[1] transition-all duration-[0.1s] ease-linear" rx="15" fill="white" />
+                <path
+                  d="M18.2451 15H16.2892V22H13.3725V15H12V12.5294H13.3725V10.9167C13.3725 9.78431 13.9216 8 16.2892 8H18.451V10.402H16.9069C16.6667 10.402 16.2892 10.5392 16.2892 11.0882V12.5294H18.4853L18.2451 15Z"
+                  fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
+              </svg>
+            </a>
+            <a href="#" class="mr-4 w-[35px] h-[35px] group ">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 30 30" fill="none">
+                <rect opacity="0.2" width="30" height="30"
+                  class="group-hover:opacity-[1] transition-all duration-[0.1s] ease-linear" rx="15" fill="white" />
+                <path
+                  d="M21.75 9.71717C21.7134 10.0466 21.6402 10.4127 21.567 10.7422C20.9446 13.6708 20.3223 16.5994 19.7 19.528C19.6634 19.711 19.6268 19.8574 19.5535 20.0039C19.4071 20.2601 19.1875 20.3333 18.8946 20.2601C18.7116 20.2235 18.5651 20.1503 18.4187 20.0405C17.4669 19.3449 16.5517 18.6494 15.5999 17.9539C15.4901 17.8806 15.4169 17.8806 15.3071 17.9905C14.8312 18.4298 14.3919 18.9057 13.916 19.3449C13.733 19.528 13.5499 19.6378 13.2937 19.6012C13.1106 19.6012 13.0008 19.528 12.9642 19.3449C12.6713 18.4298 12.3785 17.5512 12.0856 16.636C11.9758 16.3431 11.866 16.0137 11.7928 15.7208C11.7561 15.611 11.7195 15.5378 11.5731 15.5012C10.6579 15.2083 9.74273 14.9154 8.82755 14.6592C8.71772 14.6226 8.57129 14.586 8.46147 14.5128C8.20522 14.3663 8.16861 14.1467 8.42486 13.927C8.57129 13.7806 8.75433 13.7074 8.97398 13.6342C10.2186 13.1583 11.4633 12.6824 12.7079 12.2065C15.4169 11.1815 18.0892 10.1199 20.7982 9.09484C20.8348 9.09484 20.8348 9.09484 20.8714 9.05823C21.3839 8.8752 21.75 9.13145 21.75 9.71717ZM13.3303 18.7592C13.3669 18.7226 13.3669 18.686 13.3669 18.686C13.4401 18.0271 13.4767 17.3681 13.5499 16.7092C13.5499 16.5628 13.6231 16.4163 13.733 16.3065C15.4901 14.7324 17.2473 13.1583 19.0044 11.5842C19.1143 11.4743 19.2241 11.4011 19.3339 11.2913C19.3705 11.2547 19.4437 11.2181 19.4071 11.1449C19.3705 11.0716 19.2973 11.0716 19.2241 11.0716C19.0777 11.0716 18.9678 11.1449 18.858 11.2181C16.6982 12.5726 14.5383 13.927 12.3785 15.3181C12.2687 15.3913 12.232 15.4645 12.2687 15.611C12.5249 16.4163 12.7812 17.2217 13.074 18.0271C13.1472 18.2101 13.2204 18.4664 13.3303 18.7592Z"
+                  fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
+              </svg>
+            </a>
+          </div>
+
+        </div>
+        <div
+          class="link-footer [@media(min-width:786px)]:w-[30%] [@media(min-width:450px)]:w-1/2 [@media(max-width:450px)]:w-full mb-5">
+          <div class="mb-3">
+            <a href="./about.html"
+              class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">О
+              компании</a>
+          </div>
+          <div class="mb-3">
+            <a href="./project.html"
+              class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">Проекты</a>
+          </div>
+          <div class="mb-3">
+            <a href="./products.html"
+              class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">Продукция</a>
+          </div>
+          <div class="mb-3">
+            <a href="./questions.html"
+              class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">Вопросы</a>
+          </div>
+        </div>
+        <div class="address-footer [@media(min-width:786px)]:w-2/5 [@media(max-width:768px)]:w-full">
+          <div class="mb-3">
+            <a href="https://www.google.com/maps/search/+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD,+%D0%B3.+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%D0%A3%D0%BB.+%D0%A2%D0%B5%D0%BC%D1%83%D1%80+%D0%9C%D0%B0%D0%BB%D0%B8%D0%BA,+%D0%B4%D0%BE%D0%BC+17%D0%B0/@41.2905012,69.3319186,18z?entry=ttu"
+              class="text-white flex text-[14px]">
+              <div class="mr-3 font-[600]">Адрес:</div>
+              <div>Узбекистан, г. ТашкентУл. Темур Малик, дом 17а</div>
+            </a>
+          </div>
+          <div class="mb-3">
+            <a href="tel:+99 893 45 05" class="text-white flex text-[14px]">
+              <div class="mr-3 font-[600]">Телефонный номер:</div>
+              <div>+99 893 505 45 05</div>
+            </a>
+          </div>
+          <div class="mb-3">
+            <a href="mailto:info@sos.uz" class="text-white flex text-[14px]">
+              <div class="mr-3 font-[600]">Электронная почта:</div>
+              <div>info@sos.uz</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-footer py-5 bg-[#161616] w-full mx-auto px-3">
+        <div class="text-content max-w-screen-xl mx-auto flex justify-between items-center flex-wrap">
+          <a href="./index.html"
+            class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
+            “Proxima” Все права защищены
+          </a>
+          <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-right max-sm:text-center my-1">
+            © Copyright 2023 - SOS Group
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./src/js/app.js"></script>
+</body>
+
+</html>
+
+<!-- 
+
+
+ -->
