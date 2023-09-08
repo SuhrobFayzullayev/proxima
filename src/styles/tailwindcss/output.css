@@ -3564,6 +3564,10 @@ body,
     max-height: 100px;
   }
 
+  .sm\:max-h-\[120px\] {
+    max-height: 120px;
+  }
+
   .sm\:max-h-\[125px\] {
     max-height: 125px;
   }
@@ -3578,6 +3582,14 @@ body,
 
   .sm\:max-h-\[65px\] {
     max-height: 65px;
+  }
+
+  .sm\:max-h-\[123px\] {
+    max-height: 123px;
+  }
+
+  .sm\:max-h-\[121px\] {
+    max-height: 121px;
   }
 
   .sm\:w-1\/2 {
