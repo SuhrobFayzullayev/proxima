@@ -13,173 +13,173 @@
 
 <body>
   <div class="w-full mx-auto wrapper-fluid overflow-hidden relative flex min-h-screen flex-col">
-  <!-- header start -->
-  <div class="header absolute top-0 left-0 z-10 w-full  px-4">
-    <div class="header-centered max-w-screen-xl mx-auto w-full py-4 flex justify-between items-center">
-      <div id="navbar-toggler"
-        class="navbar-toggler cursor-pointer [@media(min-width:1100px)]:hidden sm:w-[30px] sm:h-[30px]  max-sm:w-[20px] max-sm:h-[20px]">
-        <img src="./src/public/icons/menu.png" alt="" class="w-full h-full">
-      </div>
+    <!-- header start -->
+    <div class="header absolute top-0 left-0 z-10 w-full  px-4">
+      <div class="header-centered max-w-screen-xl mx-auto w-full py-4 flex justify-between items-center">
+        <div id="navbar-toggler"
+          class="navbar-toggler cursor-pointer [@media(min-width:1100px)]:hidden sm:w-[30px] sm:h-[30px]  max-sm:w-[20px] max-sm:h-[20px]">
+          <img src="./src/public/icons/menu.png" alt="" class="w-full h-full">
+        </div>
 
-      <div class="logo">
-        <a href="/index.html">
-          <img src="./src/public/icons/logo.png" alt="" class="sm:w-[180px] max-sm:-mt-1 max-sm:w-[150px]" />
-        </a>
-      </div>
+        <div class="logo">
+          <a href="/index.html">
+            <img src="./src/public/icons/logo.png" alt="" class="sm:w-[180px] max-sm:-mt-1 max-sm:w-[150px]" />
+          </a>
+        </div>
 
-      <div class="link-content [@media(max-width:1100px)]:hidden flex text-white text-[16px] justify-between
+        <div class="link-content [@media(max-width:1100px)]:hidden flex text-white text-[16px] justify-between
           items-center max-w-[50%] w-full mx-5">
-        <a href="./about.html">О компании</a>
-        <a href="./project.html">Проекты</a>
-        <a href="./products.html">Продукция</a>
-        <a href="./questions.html">Вопросы</a>
-      </div>
-
-      <div class="search-content  flex justify-between items-center">
-        <button onclick="submitApplicationModalOpen()"
-          class="px-3 py-2 [@media(max-width:1100px)]:hidden text-center w-max border bg-transparent text-[14px] text-[white] uppercase">
-          Оставить заявку
-        </button>
-
-        <div id="dropdownBtn" class="languages-dropdown sm:mx-5 max-sm:mr-2 max-sm:ml-0 relative">
-          <div id="lang-head" class="head text-white text-[16px] cursor-pointer flex items-center">
-            <span class="current-language">Uz</span>
-            <span class="mx-1 mt-[2px]">
-              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 12 7" fill="none">
-                <path d="M11 1L6 6L1 1" stroke="white" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
-          </div>
-          <div id="dropdownContent"
-            class="body hidden absolute p-2 top-[32px] border w-[40px] h-fit bg-transparent right-0">
-            <a href="#" id="en" class="text-white text-[16px]">Uz</a>
-            <br />
-            <a href="#" id="ru" class="text-white text-[16px]">Ru</a>
-          </div>
+          <a href="./about.html">О компании</a>
+          <a href="./project.html">Проекты</a>
+          <a href="./products.html">Продукция</a>
+          <a href="./questions.html">Вопросы</a>
         </div>
 
-        <div id="searchBtn"
-          class="search cursor-pointer sm:w-[30px] sm:h-[30px] relative max-sm:w-[25px] max-sm:h-[25px]">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 28 28" fill="none">
-            <path
-              d="M21 12.25C21 17.0824 17.0824 21 12.25 21C7.4175 21 3.5 17.0824 3.5 12.25C3.5 7.4175 7.4175 3.5 12.25 3.5C17.0824 3.5 21 7.4175 21 12.25Z"
-              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M23.3336 23.3334L18.4375 18.4373" stroke="white" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+        <div class="search-content  flex justify-between items-center">
+          <button onclick="submitApplicationModalOpen()"
+            class="px-3 py-2 [@media(max-width:1100px)]:hidden text-center w-max border bg-transparent text-[14px] text-[white] uppercase">
+            Оставить заявку
+          </button>
 
-          <div id="searchContent"
-            class="search-content hidden w-[260px] h-[45px] border border-white bg-transparent absolute top-[40px] right-0">
-            <form action="" class="w-full h-full p-0 m-0 flex ">
-              <input type="text"
-                class="border-none bg-transparent placeholder:text-white text-[18px] outline-none w-full h-full px-3 py-2 text-white"
-                placeholder="Search...">
-              <button type="submit" class="p-2 border-l"> <svg xmlns="http://www.w3.org/2000/svg"
-                  class="w-full h-full" viewBox="0 0 28 28" fill="none">
-                  <path
-                    d="M21 12.25C21 17.0824 17.0824 21 12.25 21C7.4175 21 3.5 17.0824 3.5 12.25C3.5 7.4175 7.4175 3.5 12.25 3.5C17.0824 3.5 21 7.4175 21 12.25Z"
-                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                  <path d="M23.3336 23.3334L18.4375 18.4373" stroke="white" stroke-width="2" stroke-linecap="round"
+          <div id="dropdownBtn" class="languages-dropdown sm:mx-5 max-sm:mr-2 max-sm:ml-0 relative">
+            <div id="lang-head" class="head text-white text-[16px] cursor-pointer flex items-center">
+              <span class="current-language">Uz</span>
+              <span class="mx-1 mt-[2px]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 12 7" fill="none">
+                  <path d="M11 1L6 6L1 1" stroke="white" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
-                </svg></button>
-            </form>
+                </svg>
+              </span>
+            </div>
+            <div id="dropdownContent"
+              class="body hidden absolute p-2 top-[32px] border w-[40px] h-fit bg-transparent right-0">
+              <a href="#" id="en" class="text-white text-[16px]">Uz</a>
+              <br />
+              <a href="#" id="ru" class="text-white text-[16px]">Ru</a>
+            </div>
+          </div>
+
+          <div id="searchBtn"
+            class="search cursor-pointer sm:w-[30px] sm:h-[30px] relative max-sm:w-[25px] max-sm:h-[25px]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 28 28" fill="none">
+              <path
+                d="M21 12.25C21 17.0824 17.0824 21 12.25 21C7.4175 21 3.5 17.0824 3.5 12.25C3.5 7.4175 7.4175 3.5 12.25 3.5C17.0824 3.5 21 7.4175 21 12.25Z"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M23.3336 23.3334L18.4375 18.4373" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+            <div id="searchContent"
+              class="search-content hidden w-[260px] h-[45px] border border-white bg-transparent absolute top-[40px] right-0">
+              <form action="" class="w-full h-full p-0 m-0 flex ">
+                <input type="text"
+                  class="border-none bg-transparent placeholder:text-white text-[18px] outline-none w-full h-full px-3 py-2 text-white"
+                  placeholder="Search...">
+                <button type="submit" class="p-2 border-l"> <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-full h-full" viewBox="0 0 28 28" fill="none">
+                    <path
+                      d="M21 12.25C21 17.0824 17.0824 21 12.25 21C7.4175 21 3.5 17.0824 3.5 12.25C3.5 7.4175 7.4175 3.5 12.25 3.5C17.0824 3.5 21 7.4175 21 12.25Z"
+                      stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M23.3336 23.3334L18.4375 18.4373" stroke="white" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg></button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- off-canvas start -->
-    <div id="header-off-canvas"
-      class="overflow-hidden [&.open-canvas]:-translate-x-[14px] w-[100vw] -translate-x-[100%] header-off-canvas absolute z-20 top-0 left-0 h-[100vh] bg-[rgba(0,0,0,0.3)]">
-      <div
-        class="transition-all duration-[0.15s] left-side max-w-[400px] -translate-x-[100%]  h-full mr-[60px] bg-white px-10 py-5">
-        <div class="links w-full">
-          <div class="link">
-            <a href="./about.html"
-              class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
-              О компании </a>
-          </div>
-          <div class="link my-3">
-            <a href="./project.html"
-              class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
-              Проекты </a>
-          </div>
-          <div class="link my-3">
-            <a href="./products.html"
-              class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
-              Продукция </a>
-          </div>
-          <div class="link">
-            <a href="./questions.html"
-              class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
-              Вопросы </a>
-          </div>
-          <div class="link mt-4">
-            <button onclick="submitApplicationModalOpen()" class=" px-3 py-2 text-center w-max border border-orange text-orange bg-transparent
+      <!-- off-canvas start -->
+      <div id="header-off-canvas"
+        class="overflow-hidden [&.open-canvas]:-translate-x-[14px] w-[100vw] -translate-x-[100%] header-off-canvas absolute z-20 top-0 left-0 h-[100vh] bg-[rgba(0,0,0,0.3)]">
+        <div
+          class="transition-all duration-[0.15s] left-side max-w-[400px] -translate-x-[100%]  h-full mr-[60px] bg-white px-10 py-5">
+          <div class="links w-full">
+            <div class="link">
+              <a href="./about.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                О компании </a>
+            </div>
+            <div class="link my-3">
+              <a href="./project.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                Проекты </a>
+            </div>
+            <div class="link my-3">
+              <a href="./products.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                Продукция </a>
+            </div>
+            <div class="link">
+              <a href="./questions.html"
+                class="[@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] font-[500] text-orange">
+                Вопросы </a>
+            </div>
+            <div class="link mt-4">
+              <button onclick="submitApplicationModalOpen()" class=" px-3 py-2 text-center w-max border border-orange text-orange bg-transparent
               [@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] uppercase">
-              Оставить заявку
-            </button>
+                Оставить заявку
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <!-- off-canvas end -->
+
     </div>
-    <!-- off-canvas end -->
+    <!-- header end -->
 
-  </div>
-  <!-- header end -->
+    <!-- submit application start -->
+    <div id="submit-application"
+      class="hidden backdrop px-5 fixed z-50 justify-stretch items-start top-0 left-0 w-full h-full bg-[rgb(0,0,0,0.60)]">
+      <div class="transition-all duration-[0.2s] ease-linear max-w-[500px] w-full bg-white h-fit mx-auto p-3 mt-32">
+        <div class="close-btn float-right m-2 cursor-pointer" id="applicationCloseBtn"
+          onclick="submitApplicationModalClose()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22" fill="none">
+            <path
+              d="M0.292993 0.292893C0.683518 -0.0976311 1.31668 -0.097631 1.70721 0.292893L21.5062 20.0919C21.8967 20.4824 21.8967 21.1156 21.5062 21.5061C21.1157 21.8966 20.4825 21.8966 20.092 21.5061L0.292994 1.70711C-0.0975304 1.31658 -0.097531 0.683417 0.292993 0.292893Z"
+              fill="#D5D5D5" />
+            <path
+              d="M21.5061 0.293125C21.1156 -0.0973988 20.4824 -0.0973988 20.0919 0.293125L0.292893 20.0921C-0.0976308 20.4826 -0.0976314 21.1158 0.292893 21.5063C0.683417 21.8969 1.31658 21.8969 1.70711 21.5063L21.5061 1.70734C21.8966 1.31682 21.8966 0.68365 21.5061 0.293125Z"
+              fill="#D5D5D5" />
+          </svg>
+        </div>
+        <!-- Text content start -->
+        <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
+          <!-- Title start -->
+          <div
+            class="title text-dimgray mt-5 [@media(min-width:576px)]:text-[36px] [@media(max-width:576px)]:text-[30px] font-[300]">
+            Оставить заявку
+          </div>
+          <!-- Title end -->
+        </div>
+        <!-- Text content end -->
 
-   <!-- submit application start -->
-   <div id="submit-application"
-   class="hidden backdrop px-5 fixed z-50 justify-stretch items-start top-0 left-0 w-full h-full bg-[rgb(0,0,0,0.60)]">
-   <div class="transition-all duration-[0.2s] ease-linear max-w-[500px] w-full bg-white h-fit mx-auto p-3 mt-32">
-     <div class="close-btn float-right m-2 cursor-pointer" id="applicationCloseBtn"
-       onclick="submitApplicationModalClose()">
-       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22" fill="none">
-         <path
-           d="M0.292993 0.292893C0.683518 -0.0976311 1.31668 -0.097631 1.70721 0.292893L21.5062 20.0919C21.8967 20.4824 21.8967 21.1156 21.5062 21.5061C21.1157 21.8966 20.4825 21.8966 20.092 21.5061L0.292994 1.70711C-0.0975304 1.31658 -0.097531 0.683417 0.292993 0.292893Z"
-           fill="#D5D5D5" />
-         <path
-           d="M21.5061 0.293125C21.1156 -0.0973988 20.4824 -0.0973988 20.0919 0.293125L0.292893 20.0921C-0.0976308 20.4826 -0.0976314 21.1158 0.292893 21.5063C0.683417 21.8969 1.31658 21.8969 1.70711 21.5063L21.5061 1.70734C21.8966 1.31682 21.8966 0.68365 21.5061 0.293125Z"
-           fill="#D5D5D5" />
-       </svg>
-     </div>
-     <!-- Text content start -->
-     <div class="text-content pl-3 pr-4 mx-auto max-w-[1000px] overflow-hidden">
-       <!-- Title start -->
-       <div
-         class="title text-dimgray mt-5 [@media(min-width:576px)]:text-[36px] [@media(max-width:576px)]:text-[30px] font-[300]">
-         Оставить заявку
-       </div>
-       <!-- Title end -->
-     </div>
-     <!-- Text content end -->
+        <!-- Form Content start -->
+        <div class="form-content mx-auto px-2 ">
+          <form action="" method="get" class="my-3">
+            <div class="input-content">
+              <input required type="text"
+                class="w-full [@media(min-width:576px)]:h-[50px] [@media(max-width:576px)]:h-[45px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-dimgray outline-none border"
+                placeholder="ФИО" />
+              <input required type="number"
+                class="w-full [@media(min-width:576px)]:h-[50px] [@media(max-width:576px)]:h-[45px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-dimgray outline-none border"
+                placeholder="Телефонный номер" />
 
-     <!-- Form Content start -->
-     <div class="form-content mx-auto px-2 ">
-       <form action="" method="get" class="my-3">
-         <div class="input-content">
-           <input required type="text"
-             class="w-full [@media(min-width:576px)]:h-[50px] [@media(max-width:576px)]:h-[45px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-dimgray outline-none border"
-             placeholder="ФИО" />
-           <input required type="number"
-             class="w-full [@media(min-width:576px)]:h-[50px] [@media(max-width:576px)]:h-[45px] px-3 my-2 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-dimgray outline-none border"
-             placeholder="Телефонный номер" />
+            </div>
+            <div class="button-content my-3 w-full flex justify-center items-center">
+              <button type="submit"
+                class="border-none uppercase w-full [@media(min-width:576px)]:py-3 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-2 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-orange">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Form Content end -->
+      </div>
+    </div>
 
-         </div>
-         <div class="button-content my-3 w-full flex justify-center items-center">
-           <button type="submit"
-             class="border-none uppercase w-full [@media(min-width:576px)]:py-3 [@media(min-width:576px)]:px-6 [@media(max-width:576px)]:py-2 [@media(max-width:576px)]:px-5 [@media(min-width:576px)]:text-[18px] [@media(max-width:576px)]:text-[16px] text-[white] bg-orange">
-             Отправить
-           </button>
-         </div>
-       </form>
-     </div>
-     <!-- Form Content end -->
-   </div>
- </div>
-
- <!-- submit application end -->
+    <!-- submit application end -->
 
     <div class="main mb-20 h-fit">
       <div
@@ -225,6 +225,35 @@
               </div>
 
               <!-- foreach end -->
+            </div>
+            <div class="mx-auto mt-10 w-full flex justify-center items-center">
+              <!-- pagination start -->
+              <div class="pagination flex justify-between items-center">
+                <a href="#"
+                  class="pagination-prev w-fit h-fit flex justify-center items-center text-[18px] font-[600] m-3 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                    <path d="M11 1L0.999999 11L11 21" stroke="#E0E0E0" class="group-hover:stroke-orange"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+
+                <a href="#"
+                  class="pagination-item sm:w-[50px] max-sm:w-[40px] max-sm:h-[40px] sm:h-[50px] flex justify-center items-center sm:text-[18px] max-sm:text-[16px] font-[600] m-3 text-dimgray border transition-all duration-100 ease-linear [&.active-pagination]:text-white hover:bg-orange hover:border-orange hover:text-white [&.active-pagination]:border-orange [&.active-pagination]:bg-orange ">1</a>
+                <a href="#"
+                  class="pagination-item sm:w-[50px] max-sm:w-[40px] max-sm:h-[40px] sm:h-[50px] flex justify-center items-center sm:text-[18px] max-sm:text-[16px] font-[600] m-3 text-dimgray border transition-all duration-100 ease-linear [&.active-pagination]:text-white hover:bg-orange hover:border-orange hover:text-white [&.active-pagination]:border-orange [&.active-pagination]:bg-orange active-pagination">2</a>
+                <a href="#"
+                  class="pagination-item sm:w-[50px] max-sm:w-[40px] max-sm:h-[40px] sm:h-[50px]  flex justify-center items-center sm:text-[18px] max-sm:text-[16px] font-[600] m-3 text-dimgray border transition-all duration-100 ease-linear [&.active-pagination]:text-white hover:bg-orange hover:border-orange hover:text-white [&.active-pagination]:border-orange [&.active-pagination]:bg-orange ">3</a>
+
+                <a href="#"
+                  class="pagination-next w-fit h-fit flex justify-center items-center text-[18px] font-[600] m-3 group">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22" fill="none">
+                    <path d="M1 1L11 11L1 21" stroke="#E0E0E0" class="group-hover:stroke-orange" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+
+              </div>
+              <!-- pagination end -->
             </div>
           </div>
         </div>
