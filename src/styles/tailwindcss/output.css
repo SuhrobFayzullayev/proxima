@@ -1131,6 +1131,10 @@ body,
   max-height: 100%;
 }
 
+.max-h-\[150px\] {
+  max-height: 150px;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
