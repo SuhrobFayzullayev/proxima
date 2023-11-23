@@ -34,12 +34,15 @@ navbarToggler?.addEventListener("click", () => {
   offCanvas.classList.add("open-canvas");
   offCanvas.children[0].classList.remove("-translate-x-[100%]");
   offCanvas.children[0].classList.add("translate-x-o");
+  document.body.style.overflow = "hidden";
 });
 
 document.body.addEventListener("click", (e) => {
   if (e.target === offCanvas) {
     offCanvas.children[0].classList.add("-translate-x-[100%]");
     offCanvas.children[0].classList.remove("translate-x-o");
+    document.body.style.overflow = "visible";
+
     setTimeout(() => {
       offCanvas.classList.remove("open-canvas");
     }, 100);
@@ -167,3 +170,21 @@ function moreProject() {
     moreProjectBtn.classList.add("hidden");
   }
 }
+
+window.addEventListener("scroll", function () {
+  let navArea = document.getElementById("navArea");
+
+  if (window.pageYOffset > 0) {
+    if (!navArea.classList.contains("header-bg-color")) {
+      navArea.classList.add("header-bg-color");
+      dropdownContent.classList.remove("bg-transparent");
+      dropdownContent.classList.add("bg-dimgray");
+      searchContent.children[0].classList.add("bg-dimgray");
+    }
+  } else {
+    navArea.classList.remove("header-bg-color");
+    dropdownContent.classList.remove("bg-dimgray");
+    dropdownContent.classList.add("bg-transparent");
+    searchContent.children[0].classList.remove("bg-dimgray");
+  }
+});

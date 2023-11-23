@@ -15,10 +15,10 @@
 <body>
   <div class="w-full mx-auto wrapper-fluid overflow-hidden relative flex min-h-screen flex-col">
     <!-- header start -->
-    <div class="header absolute top-0 left-0 z-10 w-full  px-4">
+    <div id="navArea" class="header fixed top-0 left-0 z-10 w-full  px-4">
       <div class="header-centered max-w-screen-xl mx-auto w-full py-4 flex justify-between items-center">
         <div id="navbar-toggler"
-          class="navbar-toggler cursor-pointer [@media(min-width:1100px)]:hidden sm:w-[30px] sm:h-[30px]  max-sm:w-[20px] max-sm:h-[20px]">
+          class="navbar-toggler cursor-pointer xl:hidden sm:w-[30px] sm:h-[30px]  max-sm:w-[20px] max-sm:h-[20px]">
           <img src="./src/public/icons/menu.png" alt="" class="w-full h-full">
         </div>
 
@@ -28,8 +28,8 @@
           </a>
         </div>
 
-        <div class="link-content [@media(max-width:1100px)]:hidden flex text-white text-[16px] justify-between
-            items-center max-w-[50%] w-full mx-5">
+        <div class="link-content max-xl:hidden flex text-white text-[16px] justify-between
+            items-center max-w-[40%] w-full">
           <a href="./about.html">О компании</a>
           <a href="./project.html">Проекты</a>
           <a href="./products.html">Продукция</a>
@@ -37,8 +37,10 @@
         </div>
 
         <div class="search-content  flex justify-between items-center">
+          <a href="tel:" class="text-white xl:mt-1 mr-5 max-md:hidden">+99 893 505 45 05</a>
+
           <button onclick="submitApplicationModalOpen()"
-            class="px-3 py-2 [@media(max-width:1100px)]:hidden text-center w-max border bg-transparent text-[14px] text-[white] uppercase">
+            class="px-3 py-2 max-xl:hidden text-center w-max border bg-transparent text-[14px] text-[white] uppercase">
             Оставить заявку
           </button>
 
@@ -92,7 +94,7 @@
 
       <!-- off-canvas start -->
       <div id="header-off-canvas"
-        class="overflow-hidden [&.open-canvas]:-translate-x-[14px] w-[100vw] -translate-x-[100%] header-off-canvas absolute z-20 top-0 left-0 h-[100vh] bg-[rgba(0,0,0,0.3)]">
+        class="overflow-hidden border [&.open-canvas]:-translate-x-[0px] w-[100vw] -translate-x-[100%] header-off-canvas absolute z-20 top-0 left-0 h-[100vh] bg-[rgba(0,0,0,0.3)]">
         <div
           class="transition-all duration-[0.15s] left-side max-w-[400px] -translate-x-[100%]  h-full mr-[60px] bg-white px-10 py-5">
           <div class="links w-full">
@@ -121,6 +123,11 @@
                 [@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px] uppercase">
                 Оставить заявку
               </button>
+            </div>
+            <div class="link mt-4">
+              <a href="tel:"
+                class="text-orange  [@media(max-width:480px)]:text-[14px] [@media(min-width:480px)]:text-[18px]  [@media(max-width:768px)]:block hidden">+99
+                893 505 45 05</a>
             </div>
           </div>
         </div>
@@ -267,17 +274,19 @@
       </div>
     </div>
 
-    <div class="footer w-full mx-auto mt-auto bg-[#2B2B2B]">
+    <div class="footer w-full mx-auto mt-auto bg-[#423d3d]">
       <div class="top-footer mx-auto max-w-screen-xl my-10 flex flex-wrap justify-between px-3">
         <div
           class="logo-footer mb-5 [@media(min-width:786px)]:w-[30%] [@media(min-width:450px)]:w-1/2 [@media(max-width:450px)]:w-full">
+
           <div class="logo">
             <a href="./index.html">
               <img src="./src/public/icons/logo.png" alt="" class="max-w-[180px]">
             </a>
           </div>
+
           <div class="sm-icons w-fit flex justify-between items-center mt-7">
-            <a href="" class="mr-4 w-[35px] h-[35px] group ">
+            <a href="#" class="mr-4 w-[35px] h-[35px] group ">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 30 30" fill="none">
                 <rect opacity="0.2" width="30" height="30"
                   class="group-hover:opacity-[1] transition-all duration-[0.1s] ease-linear" rx="15" fill="white" />
@@ -292,8 +301,7 @@
                   fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
               </svg>
             </a>
-
-            <a href="" class="mr-4 w-[35px] h-[35px] group ">
+            <a href="#" class="mr-4 w-[35px] h-[35px] group ">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 30 30" fill="none">
                 <rect opacity="0.2" width="30" height="30"
                   class="group-hover:opacity-[1] transition-all duration-[0.1s] ease-linear" rx="15" fill="white" />
@@ -302,7 +310,7 @@
                   fill="white" class="group-hover:fill-orange transition-all duration-[0.1s] ease-linear" />
               </svg>
             </a>
-            <a href="" class="mr-4 w-[35px] h-[35px] group ">
+            <a href="#" class="mr-4 w-[35px] h-[35px] group ">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-full" viewBox="0 0 30 30" fill="none">
                 <rect opacity="0.2" width="30" height="30"
                   class="group-hover:opacity-[1] transition-all duration-[0.1s] ease-linear" rx="15" fill="white" />
@@ -312,28 +320,40 @@
               </svg>
             </a>
           </div>
+
         </div>
         <div
           class="link-footer [@media(min-width:786px)]:w-[30%] [@media(min-width:450px)]:w-1/2 [@media(max-width:450px)]:w-full mb-5">
           <div class="mb-3">
-            <a href="#"
+            <a href="./about.html"
               class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">О
               компании</a>
           </div>
           <div class="mb-3">
-            <a href="#"
+            <a href="./project.html"
               class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">Проекты</a>
           </div>
           <div class="mb-3">
-            <a href="#"
+            <a href="./products.html"
               class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">Продукция</a>
           </div>
           <div class="mb-3">
-            <a href="#"
+            <a href="./questions.html"
               class="hover:text-white text-[#9E9E9E] text-[16px] transition-all duration-100 mb-10 ease-linear uppercase">Вопросы</a>
           </div>
         </div>
         <div class="address-footer [@media(min-width:786px)]:w-2/5 [@media(max-width:768px)]:w-full">
+          <div class="mb-4">
+            <!-- <a href="https://www.google.com/maps/search/+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD,+%D0%B3.+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%D0%A3%D0%BB.+%D0%A2%D0%B5%D0%BC%D1%83%D1%80+%D0%9C%D0%B0%D0%BB%D0%B8%D0%BA,+%D0%B4%D0%BE%D0%BC+17%D0%B0/@41.2905012,69.3319186,18z?entry=ttu"
+              class="text-white flex text-[14px]">
+              <div class="mr-3 font-[600]">Адрес:</div>
+              <div>Узбекистан, г. ТашкентУл. Темур Малик, дом 17а</div>
+            </a> -->
+            <button onclick="submitApplicationModalOpen()"
+              class="px-3 py-2 text-center w-max border bg-transparent text-[14px] text-[white] uppercase">
+              Оставить заявку
+            </button>
+          </div>
           <div class="mb-3">
             <a href="https://www.google.com/maps/search/+%D0%A3%D0%B7%D0%B1%D0%B5%D0%BA%D0%B8%D1%81%D1%82%D0%B0%D0%BD,+%D0%B3.+%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%D0%A3%D0%BB.+%D0%A2%D0%B5%D0%BC%D1%83%D1%80+%D0%9C%D0%B0%D0%BB%D0%B8%D0%BA,+%D0%B4%D0%BE%D0%BC+17%D0%B0/@41.2905012,69.3319186,18z?entry=ttu"
               class="text-white flex text-[14px]">
@@ -353,10 +373,6 @@
               <div>info@sos.uz</div>
             </a>
           </div>
-          <div class="mb-3">
-            <a href="#" class="text-white">
-            </a>
-          </div>
         </div>
       </div>
       <div class="bottom-footer py-5 bg-[#161616] w-full mx-auto px-3">
@@ -365,7 +381,7 @@
             class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
             “Proxima” Все права защищены
           </a>
-          <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-left max-sm:text-center my-1">
+          <a href="sos.uz" class="text-[#9E9E9E] text-[16px] sm:w-1/2 max-sm:w-full text-right max-sm:text-center my-1">
             © Copyright 2023 - SOS Group
           </a>
         </div>

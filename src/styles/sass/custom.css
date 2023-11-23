@@ -39,4 +39,11 @@
 .swiper .swiper-button-prev:after {
     font-size: 10px !important;
   }
+}
+#navArea {
+  transition: all 0.3s linear;
+}
+
+.header-bg-color {
+  background-color: #646464 !important;
 }/*# sourceMappingURL=custom.css.map */
